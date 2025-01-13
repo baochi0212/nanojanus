@@ -191,13 +191,13 @@ class MultiModalityCausalLM(MultiModalityPreTrainedModel):
     def __init__(self, config: MultiModalityConfig):
         super().__init__(config)
 
-        vision_config = config.vision_config
-        vision_cls = model_name_to_cls(vision_config.cls)
-        self.vision_model = vision_cls(**vision_config.params)
-
-        aligner_config = config.aligner_config
-        aligner_cls = model_name_to_cls(aligner_config.cls)
-        self.aligner = aligner_cls(aligner_config.params)
+        # vision_config = config.vision_config
+        # vision_cls = model_name_to_cls(vision_config.cls)
+        # self.vision_model = vision_cls(**vision_config.params)
+        #
+        # aligner_config = config.aligner_config
+        # aligner_cls = model_name_to_cls(aligner_config.cls)
+        # self.aligner = aligner_cls(aligner_config.params)
 
         gen_vision_config = config.gen_vision_config
         gen_vision_cls = model_name_to_cls(gen_vision_config.cls)
